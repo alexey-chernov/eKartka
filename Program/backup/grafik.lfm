@@ -1,0 +1,330 @@
+object formGrafik: TformGrafik
+  Left = 870
+  Height = 600
+  Top = 199
+  Width = 800
+  BorderStyle = bsDialog
+  Caption = 'Графік прийому пацієнтів'
+  ClientHeight = 600
+  ClientWidth = 800
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '3.4.0.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 500
+    Top = 50
+    Width = 800
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'Час'
+        FieldName = 'timereception'
+      end    
+      item
+        Title.Caption = 'Пацієнт'
+        Width = 250
+        FieldName = 'patientfullname'
+      end    
+      item
+        Title.Caption = 'Статус'
+        Width = 150
+        FieldName = 'statereception'
+      end>
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 800
+    Align = alTop
+    ClientHeight = 50
+    ClientWidth = 800
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 16
+      Height = 27
+      Top = 8
+      Width = 49
+      Caption = 'Дата:'
+      Font.Height = -19
+      ParentFont = False
+    end
+    object DateTimePicker1: TDateTimePicker
+      Left = 80
+      Height = 33
+      Top = 8
+      Width = 123
+      CenturyFrom = 1941
+      DateDisplayOrder = ddoDMY
+      MaxDate = 2958465
+      MinDate = -53780
+      Font.Height = -19
+      ParentFont = False
+      TabOrder = 0
+      DateSeparator = '-'
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeSeparator = ':'
+      DecimalSeparator = '.'
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      Date = 1.7E308
+      Time = 1.7E308
+      UseDefaultSeparators = False
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+    object Button1: TButton
+      Left = 256
+      Height = 33
+      Top = 8
+      Width = 144
+      Caption = 'Перейти'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 50
+    Top = 550
+    Width = 800
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 800
+    TabOrder = 2
+    object Button2: TButton
+      Left = 16
+      Height = 30
+      Hint = 'Створити новий запис на прийом пацієнта до лікаря'
+      Top = 10
+      Width = 168
+      Caption = 'Додати запис візиту ...'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 200
+      Height = 30
+      Hint = 'Змініити дані Запису пацієнта до лікаря'
+      Top = 10
+      Width = 168
+      Caption = 'Змінити запис візиту ...'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Left = 384
+      Height = 30
+      Hint = 'Скасуватия запис візиту до лікаря'
+      Top = 10
+      Width = 168
+      Caption = 'Скасувати візит'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      OnClick = Button4Click
+    end
+    object Button5: TButton
+      Left = 600
+      Height = 30
+      Hint = 'Завершити візит до лікаря'
+      Top = 10
+      Width = 152
+      Caption = 'Завершити візит'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+      OnClick = Button5Click
+    end
+  end
+  object SQLQuery_Reception: TSQLQuery
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id_reception'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'datereception'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'timereception'
+        DataType = ftTime
+        Precision = -1
+      end    
+      item
+        Name = 'patientfullname'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'statereception'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'doctorfullname'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'idp'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'idd'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = frmMain.PQConnection_Main
+    Transaction = frmMain.SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM sel_reception(''27/06/24'');'
+    )
+    Params = <>
+    Macros = <>
+    Left = 224
+    Top = 195
+    object SQLQuery_Receptionid_reception: TLongintField
+      FieldKind = fkData
+      FieldName = 'id_reception'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object SQLQuery_Receptiondatereception: TDateField
+      FieldKind = fkData
+      FieldName = 'datereception'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object SQLQuery_Receptiontimereception: TTimeField
+      FieldKind = fkData
+      FieldName = 'timereception'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'HH:mm'
+    end
+    object SQLQuery_Receptionpatientfullname: TStringField
+      FieldKind = fkData
+      FieldName = 'patientfullname'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object SQLQuery_Receptionstatereception: TStringField
+      FieldKind = fkData
+      FieldName = 'statereception'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object SQLQuery_Receptiondoctorfullname: TStringField
+      FieldKind = fkData
+      FieldName = 'doctorfullname'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8192
+    end
+    object SQLQuery_Receptionidp: TLongintField
+      FieldKind = fkData
+      FieldName = 'idp'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object SQLQuery_Receptionidd: TLongintField
+      FieldKind = fkData
+      FieldName = 'idd'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = frmMain.PQConnection_Main
+    Left = 412
+    Top = 195
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery_Reception
+    Left = 72
+    Top = 195
+  end
+  object SQLScript: TSQLScript
+    DataBase = frmMain.PQConnection_Main
+    Transaction = SQLTransaction_Script
+    AutoCommit = False
+    UseDollarString = False
+    Directives.Strings = (
+      'SET TERM'
+      'COMMIT WORK'
+      'COMMIT RETAIN'
+      'COMMIT'
+      '#IFDEF'
+      '#IFNDEF'
+      '#ELSE'
+      '#ENDIF'
+      '#DEFINE'
+      '#UNDEF'
+      '#UNDEFINE'
+    )
+    Terminator = ';'
+    CommentsinSQL = True
+    UseSetTerm = True
+    UseCommit = True
+    UseDefines = True
+    Left = 224
+    Top = 296
+  end
+  object SQLTransaction_Script: TSQLTransaction
+    Active = False
+    Database = frmMain.PQConnection_Main
+    Left = 412
+    Top = 296
+  end
+end

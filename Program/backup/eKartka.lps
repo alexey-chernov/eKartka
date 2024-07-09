@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="eKartka.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="42" Y="13"/>
+        <UsageCount Value="99"/>
+      </Unit>
+      <Unit>
+        <Filename Value="main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="205"/>
+        <CursorPos X="67" Y="245"/>
+        <UsageCount Value="99"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="karta_pacienta.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmKartkaPacienta"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Karta_Pacienta"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="168"/>
+        <CursorPos X="5" Y="118"/>
+        <UsageCount Value="97"/>
+      </Unit>
+      <Unit>
+        <Filename Value="createkartka.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCreateKart"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CreateKartka"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="23"/>
+        <CursorPos X="21" Y="49"/>
+        <UsageCount Value="78"/>
+      </Unit>
+      <Unit>
+        <Filename Value="addanaliz.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAddAnalisis"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos Y="30"/>
+        <UsageCount Value="68"/>
+      </Unit>
+      <Unit>
+        <Filename Value="grafik.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="formGrafik"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="167"/>
+        <CursorPos X="13" Y="197"/>
+        <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="addeditreception.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAddEditReception"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="21" Y="45"/>
+        <UsageCount Value="43"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../Lazarus_Progects/Bekeray/Admin/main.pas"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="382"/>
+        <CursorPos X="40" Y="409"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/lib/lazarus/3.0/lcl/include/statuspanels.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="28"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/lib/lazarus/3.0/lcl/lresources.pp"/>
+        <UnitName Value="LResources"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3149"/>
+        <CursorPos Y="3164"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/lib/lazarus/3.0/lcl/include/customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="906"/>
+        <CursorPos Y="922"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../Lazarus_Progects/Bekeray/Admin/users.pas"/>
+        <ComponentName Value="frmAddEditUsers"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Users"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="201"/>
+        <CursorPos X="3" Y="144"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/lib/lazarus/3.0/lcl/include/wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4322"/>
+        <CursorPos Y="4337"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../Lazarus_Progects/Bekeray/Receptura/main.pas"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="286"/>
+        <CursorPos X="3" Y="304"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../Lazarus_Progects/Bekeray/Receptura/dprod.pas"/>
+        <ComponentName Value="frmRProd"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="DProd"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../Lazarus_Progects/Bekeray/Vyrobnytstvo/addeditrec.pas"/>
+        <ComponentName Value="frmAddEditRec"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AddEditRec"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="57"/>
+        <CursorPos X="3" Y="67"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../Lazarus_Progects/Bekeray/Vyrobnytstvo/main.pas"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Main"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="388"/>
+        <CursorPos X="3" Y="395"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="750"/>
+        <CursorPos X="14" Y="764"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="addvizit.pas"/>
+        <ComponentName Value="frmVisitPatient"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AddVizit"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/share/lazarus/3.4.0/components/datetimectrls/datetimepicker.pas"/>
+        <UnitName Value="DateTimePicker"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3049"/>
+        <CursorPos X="27" Y="3049"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/share/lazarus/3.4.0/lcl/include/control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2959"/>
+        <CursorPos Y="2974"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/lib/lazarus/3.0/lcl/include/control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2968"/>
+        <CursorPos Y="2974"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../BackUps/grafik.pas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Grafik"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/share/lazarus/3.4.0/lcl/controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="24" Y="9"/>
+        <UsageCount Value="9"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="190" Column="56" TopLine="181"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="189" Column="56" TopLine="180"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="188" Column="56" TopLine="179"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="187" Column="56" TopLine="178"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="186" Column="56" TopLine="177"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="185" Column="56" TopLine="176"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="184" Column="56" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="194" Column="41" TopLine="178"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="193" Column="41" TopLine="177"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="192" Column="41" TopLine="176"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="191" Column="41" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="190" Column="41" TopLine="174"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="189" Column="41" TopLine="173"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="188" Column="41" TopLine="172"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="187" Column="41" TopLine="171"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="193" Column="41" TopLine="177"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="186" Column="56" TopLine="171"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="58" Column="7" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="106" Column="14" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="185" Column="36" TopLine="170"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="188" Column="101" TopLine="169"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="196" Column="46" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="195" Column="46" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="194" Column="46" TopLine="163"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="193" Column="46" TopLine="162"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="181" Column="78" TopLine="171"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="219" Column="38" TopLine="199"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="208" Column="65" TopLine="208"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="262" Column="86" TopLine="237"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="245" Column="49" TopLine="234"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

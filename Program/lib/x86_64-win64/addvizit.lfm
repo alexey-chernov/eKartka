@@ -1,0 +1,89 @@
+object frmVisitPatient: TfrmVisitPatient
+  Left = 240
+  Height = 600
+  Top = 178
+  Width = 800
+  Caption = 'Візит пацієнта до лікаря'
+  ClientHeight = 600
+  ClientWidth = 800
+  Position = poScreenCenter
+  LCLVersion = '3.0.0.3'
+  object LabeledEdit1: TLabeledEdit
+    Left = 16
+    Height = 34
+    Top = 40
+    Width = 760
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 27
+    EditLabel.Width = 760
+    EditLabel.Caption = 'Діагноз:'
+    EditLabel.ParentFont = False
+    EditLabel.Font.Height = -19
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 27
+    Top = 80
+    Width = 202
+    Caption = 'Лікарський висновок:'
+    Font.Height = -19
+    ParentFont = False
+  end
+  object Memo1: TMemo
+    Left = 16
+    Height = 210
+    Top = 112
+    Width = 764
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabOrder = 1
+  end
+  object Memo2: TMemo
+    Left = 16
+    Height = 169
+    Top = 360
+    Width = 764
+    Anchors = [akLeft, akRight, akBottom]
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 27
+    Top = 328
+    Width = 219
+    Caption = 'Призначене лікування:'
+    Font.Height = -19
+    ParentFont = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 550
+    Width = 800
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 800
+    TabOrder = 3
+    object BitBtn1: TBitBtn
+      Left = 16
+      Height = 30
+      Top = 8
+      Width = 368
+      DefaultCaption = True
+      Kind = bkOK
+      ModalResult = 1
+      TabOrder = 0
+    end
+    object BitBtn2: TBitBtn
+      Left = 416
+      Height = 30
+      Top = 8
+      Width = 368
+      Cancel = True
+      DefaultCaption = True
+      Kind = bkCancel
+      ModalResult = 2
+      TabOrder = 1
+    end
+  end
+end

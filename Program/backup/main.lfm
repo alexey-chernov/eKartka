@@ -1,0 +1,370 @@
+object frmMain: TfrmMain
+  Left = 750
+  Height = 600
+  Top = 369
+  Width = 800
+  Caption = 'Педіатричний кабінет'
+  ClientHeight = 600
+  ClientWidth = 800
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  ShowHint = True
+  LCLVersion = '3.4.0.0'
+  WindowState = wsMaximized
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 21
+    Top = 579
+    Width = 800
+    Panels = <    
+      item
+        Width = 200
+      end    
+      item
+        Width = 150
+      end>
+    SimplePanel = False
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 487
+    Top = 42
+    Width = 800
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'id_patient'
+        Visible = False
+        FieldName = 'id_patient'
+      end    
+      item
+        Font.Height = -13
+        Title.Caption = 'Список пацієнтів'
+        FieldName = 'patient'
+      end>
+    DataSource = DataSource1
+    PopupMenu = PopupMenu1
+    ReadOnly = True
+    TabOrder = 1
+    OnDblClick = DBGrid1DblClick
+    OnKeyDown = DBGrid1KeyDown
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 0
+    Width = 800
+    Align = alTop
+    ClientHeight = 42
+    ClientWidth = 800
+    TabOrder = 2
+    object Button1: TButton
+      Left = 16
+      Height = 25
+      Hint = 'Створення нової картки пацієнта'
+      Top = 8
+      Width = 107
+      Caption = 'Створити ...'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 152
+      Height = 25
+      Hint = 'Створення нової картки пацієнта'
+      Top = 8
+      Width = 160
+      Caption = 'Графік прийому ...'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 50
+    Top = 529
+    Width = 800
+    Align = alBottom
+    TabOrder = 3
+  end
+  object PQConnection_Main: TPQConnection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'eKartka'
+    KeepConnection = True
+    Password = 'ekartka'
+    Transaction = SQLTransaction1
+    UserName = 'kartadmin'
+    HostName = '127.0.0.1'
+    Left = 136
+    Top = 67
+  end
+  object SQLQuery_Patients: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id_patient'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'patient'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end>
+    Database = PQConnection_Main
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM sel_patients();'
+      ''
+    )
+    Params = <>
+    Macros = <>
+    Left = 208
+    Top = 176
+    object SQLQuery_Patientsid_patient: TLongintField
+      FieldKind = fkData
+      FieldName = 'id_patient'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object SQLQuery_Patientspatient: TStringField
+      FieldKind = fkData
+      FieldName = 'patient'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8192
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery_Patients
+    Left = 329
+    Top = 67
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = PQConnection_Main
+    Left = 329
+    Top = 176
+  end
+  object SQLScript: TSQLScript
+    DataBase = PQConnection_Main
+    Transaction = SQLTransaction_Script
+    AutoCommit = False
+    UseDollarString = False
+    Directives.Strings = (
+      'SET TERM'
+      'COMMIT WORK'
+      'COMMIT RETAIN'
+      'COMMIT'
+      '#IFDEF'
+      '#IFNDEF'
+      '#ELSE'
+      '#ENDIF'
+      '#DEFINE'
+      '#UNDEF'
+      '#UNDEFINE'
+    )
+    Terminator = ';'
+    CommentsinSQL = True
+    UseSetTerm = True
+    UseCommit = True
+    UseDefines = True
+    Left = 208
+    Top = 264
+  end
+  object SQLTransaction_Script: TSQLTransaction
+    Active = False
+    Database = PQConnection_Main
+    Left = 329
+    Top = 264
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 592
+    Top = 67
+    object MenuItem1: TMenuItem
+      Caption = 'Відкрити картку паціента ...'
+      OnClick = DBGrid1DblClick
+    end
+    object Separator1: TMenuItem
+      Caption = '-'
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Редагувати картку ...'
+      OnClick = MenuItem2Click
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Видалити картку'
+      OnClick = MenuItem3Click
+    end
+  end
+  object SQLQuery_PatientKart_toEdit: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id_patient'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'patientname'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'patientsurname'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'patient_address'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'patient_email'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'patient_telnumber'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'parentname'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'parentsurname'
+        DataType = ftString
+        Precision = -1
+        Size = 8192
+      end    
+      item
+        Name = 'patient_dateofbirth'
+        DataType = ftDate
+        Precision = -1
+      end>
+    Database = PQConnection_Main
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM sel_patientone_foredit(1);'
+    )
+    Params = <>
+    Macros = <>
+    Left = 208
+    Top = 391
+    object SQLQuery_PatientKart_toEditid_patient: TLongintField
+      FieldKind = fkData
+      FieldName = 'id_patient'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object SQLQuery_PatientKart_toEditpatientname: TStringField
+      FieldKind = fkData
+      FieldName = 'patientname'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8192
+    end
+    object SQLQuery_PatientKart_toEditpatientsurname: TStringField
+      FieldKind = fkData
+      FieldName = 'patientsurname'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8192
+    end
+    object SQLQuery_PatientKart_toEditpatient_address: TStringField
+      FieldKind = fkData
+      FieldName = 'patient_address'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8192
+    end
+    object SQLQuery_PatientKart_toEditpatient_email: TStringField
+      FieldKind = fkData
+      FieldName = 'patient_email'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8192
+    end
+    object SQLQuery_PatientKart_toEditpatient_telnumber: TStringField
+      FieldKind = fkData
+      FieldName = 'patient_telnumber'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8192
+    end
+    object SQLQuery_PatientKart_toEditparentname: TStringField
+      FieldKind = fkData
+      FieldName = 'parentname'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8192
+    end
+    object SQLQuery_PatientKart_toEditparentsurname: TStringField
+      FieldKind = fkData
+      FieldName = 'parentsurname'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8192
+    end
+    object SQLQuery_PatientKart_toEditpatient_dateofbirth: TDateField
+      FieldKind = fkData
+      FieldName = 'patient_dateofbirth'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+end

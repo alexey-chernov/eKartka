@@ -1,0 +1,179 @@
+object frmCreateKart: TfrmCreateKart
+  Left = 844
+  Height = 600
+  Top = 325
+  Width = 800
+  BorderStyle = bsDialog
+  Caption = 'Створення нової картки пацієнта'
+  ClientHeight = 600
+  ClientWidth = 800
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '3.4.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 558
+    Width = 800
+    Align = alBottom
+    ClientHeight = 42
+    ClientWidth = 800
+    TabOrder = 5
+    object BitBtn1: TBitBtn
+      Left = 16
+      Height = 30
+      Top = 6
+      Width = 368
+      DefaultCaption = True
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = BitBtn1Click
+      TabOrder = 0
+    end
+    object BitBtn2: TBitBtn
+      Left = 408
+      Height = 30
+      Top = 6
+      Width = 368
+      Cancel = True
+      DefaultCaption = True
+      Kind = bkCancel
+      ModalResult = 2
+      OnClick = BitBtn2Click
+      TabOrder = 1
+    end
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 24
+    Height = 34
+    Top = 40
+    Width = 256
+    EditLabel.Height = 27
+    EditLabel.Width = 256
+    EditLabel.Caption = 'Ім''я:'
+    EditLabel.ParentFont = False
+    EditLabel.Font.Height = -19
+    TabOrder = 0
+  end
+  object LabeledEdit2: TLabeledEdit
+    Left = 360
+    Height = 34
+    Top = 40
+    Width = 256
+    EditLabel.Height = 27
+    EditLabel.Width = 256
+    EditLabel.Caption = 'Прізвище:'
+    EditLabel.ParentFont = False
+    EditLabel.Font.Height = -19
+    TabOrder = 1
+  end
+  object LabeledEdit3: TLabeledEdit
+    Left = 24
+    Height = 34
+    Top = 112
+    Width = 752
+    EditLabel.Height = 27
+    EditLabel.Width = 752
+    EditLabel.Caption = 'Адреса проживання:'
+    EditLabel.ParentFont = False
+    EditLabel.Font.Height = -19
+    TabOrder = 2
+  end
+  object Label6: TLabel
+    Left = 24
+    Height = 26
+    Top = 160
+    Width = 159
+    Caption = 'Дата народження:'
+    Font.Height = 18
+    ParentFont = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 24
+    Height = 200
+    Top = 216
+    Width = 754
+    Caption = '  Дані про батьків:  '
+    ClientHeight = 176
+    ClientWidth = 752
+    Font.Height = -16
+    ParentFont = False
+    TabOrder = 4
+    object LabeledEdit4: TLabeledEdit
+      Left = 360
+      Height = 40
+      Top = 40
+      Width = 256
+      EditLabel.Height = 27
+      EditLabel.Width = 256
+      EditLabel.Caption = 'Прізвище:'
+      EditLabel.ParentFont = False
+      EditLabel.Font.Height = -19
+      TabOrder = 1
+    end
+    object LabeledEdit5: TLabeledEdit
+      Left = 24
+      Height = 40
+      Top = 40
+      Width = 256
+      EditLabel.Height = 27
+      EditLabel.Width = 256
+      EditLabel.Caption = 'Ім''я:'
+      EditLabel.ParentFont = False
+      EditLabel.Font.Height = -19
+      TabOrder = 0
+    end
+    object LabeledEdit6: TLabeledEdit
+      Left = 24
+      Height = 40
+      Top = 120
+      Width = 256
+      EditLabel.Height = 27
+      EditLabel.Width = 256
+      EditLabel.Caption = 'Номер телефону:'
+      EditLabel.ParentFont = False
+      EditLabel.Font.Height = -19
+      TabOrder = 2
+    end
+    object LabeledEdit7: TLabeledEdit
+      Left = 360
+      Height = 40
+      Top = 120
+      Width = 256
+      EditLabel.Height = 27
+      EditLabel.Width = 256
+      EditLabel.Caption = 'Адреса електронної пошти:'
+      EditLabel.ParentFont = False
+      EditLabel.Font.Height = -19
+      TabOrder = 3
+    end
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 199
+    Height = 33
+    Top = 161
+    Width = 123
+    CenturyFrom = 1941
+    DateDisplayOrder = ddoDMY
+    MaxDate = 2958465
+    MinDate = -53780
+    Font.Height = -19
+    ParentFont = False
+    TabOrder = 3
+    DateSeparator = '-'
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeSeparator = ':'
+    DecimalSeparator = '.'
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 1.7E308
+    Time = 1.7E308
+    UseDefaultSeparators = False
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+end
